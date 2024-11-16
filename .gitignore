@@ -1,0 +1,7 @@
+# Python
+__pycache__
+
+bin-input/*
+bin-int/*
+bin-output/*
+tools/*

@@ -1,0 +1,47 @@
+The section of the file that contains translations strings always starts with E0 19 96 00
+
+DATA0.BIN is a filetree for DATA1.BIN
+DATA1.BIN contain translation strings
+DATA2.BIN and DATA3.BIN are unknown
+
+iso offsets
+DATA0.BIN 0x729800
+DATA1.BIN 0x72C800
+DATA2.BIN 0x72C000
+DATA3.BIN 0xB229000
+
+Around 20 characters per line in mission description
+
+49059400.dat : Main Menu Translation Strings
+e8caf705.dat : Main Menu related (Textures?)
+
+As of now 24-06-13 we cant increase or decrease the total number of translation string bytes...
+We have a per file limit, we can't go over or under, we can add pad bytes to a dummy / last string to fit the budget
+
+5A29D625 - Spike VA
+0BBB2E72 - Specter VA
+2F8FD2A5 - Pipo Monkey VA
+13F542C8 - Jake VA
+51BE2ADA - Pipotron J VA
+59afcc76 - Helga VA
+982ac32b - Natalie VA
+02819180 - Pipo Monkey VA
+a3e607d0 - Casi VA
+d24e9143 - Pipotron VA
+d96c6d4f - Professor VA
+d474b64e - Casi VA (Dark?)
+dc58f8c7 - Specter VA (Dark?)
+e929f539 - Jake VA (Dark?)
+f57b2558 - Pipotron VA
+
+bee9555d - Menu SFX
+
+Million Monkeys uses a custom character encoding for it's strings. For more user friendly editing control codes are converted to human readable phrases in jptxt.csv
+| Control Code   | Script Name   | Description                                                                                         |
+| ---            | ---           | ---                                                                                                 |
+| 0x0A           | "[BREAK]"     | End the current line and start on the next row                                                      |
+| 0x5B           | "[FURIGANA "  | Furigana start code (Text above JP Characters)                                                      |
+| 0x5D           | "]"           | Furigana end code (Text above JP Characters)                                                        |
+| 0x3E           | "[NEWPAGE]"   | Used in Mission Descriptions, ends the current page and creates a new one                           |
+| 0x20           | "[SPACE]"     | Only seen once in Mission 1 (Are there more occurances?)                                            |
+| 0x2573         | "[SCRIPT]"    | Script related control code to allow for context specific text (EX: How much space on memory card)  |
